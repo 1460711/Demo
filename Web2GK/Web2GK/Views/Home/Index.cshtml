@@ -1,0 +1,70 @@
+﻿@model PetaPoco.Page<WebGiuaKiConnection.SanPham>
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Home page</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-widget-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        @foreach (var item in Model.Items)
+        {
+            <div class="col-md-4">
+                <div class="single-product-widget">
+                    <div class="single-wid-product">
+                        <a href="@Url.Action("Details", new { id = @item.MaSP })"><img src=@item.HinhAnh alt="" class="product-thumb"></a>
+                        <h2><a href="single-product.html">@Html.ActionLink(@item.TenSP, "Details", new { id = @item.MaSP })</a></h2>
+                        <div class="product-wid-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product-wid-price">
+                            <ins>@string.Format("{0:#0,0 VNĐ}", @item.Gia)</ins>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+    <div class="product-pagination text-center">
+        <nav>
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li>@Html.ActionLink(i.ToString(), "Index", new { page = i })</li>
+
+                }
+
+
+
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
+
+
+
+

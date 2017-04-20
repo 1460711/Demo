@@ -1,0 +1,17 @@
+﻿@model WebGiuaKiConnection.SanPham
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h1>@Model.TenSP</h1>
+<img src="@Model.HinhAnh"/>
+<h5 >Mô tả: @Model.MoTa</h5>
+<h5>Xuất xứ: @Model.XuatXu</h5>
+<h5>Giá: @Model.Gia</h5>
+<h5>Số lượng tồn: @Model.SoLuongTon</h5>
+<h5>Ngày Nhập: @Model.NgayNhap</h5>
+<h5>Màn hình: @Model.ManHinh</h5>
+<h5>Ram: @Model.Ram</h5>
+<h5>Camera: @Model.CaMeRa</h5>
+
