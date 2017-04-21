@@ -253,6 +253,30 @@ namespace WebGiuaKiConnection
 
 
 
+
+
+		[Column] public string HinhAnh1 { get; set; }
+
+
+
+
+
+		[Column] public string HinhAnh2 { get; set; }
+
+
+
+
+
+		[Column] public string HinhAnh3 { get; set; }
+
+
+
+
+
+		[Column] public string HinhAnh4 { get; set; }
+
+
+
 	}
 
 
