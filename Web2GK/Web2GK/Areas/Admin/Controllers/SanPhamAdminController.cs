@@ -31,7 +31,7 @@ namespace Web2GK.Areas.Admin.Controllers
         }
 
         // POST: Admin/SanPhamAdmin/Create
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult Create(SanPham  sp)
         {
             try

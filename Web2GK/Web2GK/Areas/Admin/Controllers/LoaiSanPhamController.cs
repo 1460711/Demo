@@ -13,7 +13,7 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPham
         public ActionResult Index()
         {
-            return View(NhaSanXuat.DanhSach());
+            return View(NhaSanXuat.DanhSachAdmin());
         }
 
         // GET: Admin/LoaiSanPham/Details/5
@@ -48,17 +48,17 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPham/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(NhaSanXuat.ChitietAdmin(id));
         }
 
         // POST: Admin/LoaiSanPham/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, LoaiSanPham lsp)
         {
             try
             {
                 // TODO: Add update logic here
-
+                NhaSanXuat.Updatensx(id, lsp);
                 return RedirectToAction("Index");
             }
             catch
@@ -66,7 +66,23 @@ namespace Web2GK.Areas.Admin.Controllers
                 return View();
             }
         }
-
+        public ActionResult XoaTamThoi(int id)
+        {
+            return View(NhaSanXuat.ChitietAdmin(id));
+        }
+        public ActionResult XoaTamThoi(int id, LoaiSanPham lsp)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                NhaSanXuat.Updatensx(id, lsp);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
         // GET: Admin/LoaiSanPham/Delete/5
         public ActionResult Delete(int id)
         {
@@ -80,7 +96,7 @@ namespace Web2GK.Areas.Admin.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+              
                 return RedirectToAction("Index");
             }
             catch

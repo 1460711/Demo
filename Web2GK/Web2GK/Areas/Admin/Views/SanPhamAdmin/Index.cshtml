@@ -53,20 +53,30 @@
         <tr>
             <td>@item.MaSP</td>
             <td>@item.TenSP</td>
-            <td>@item.MoTa</td>
+            <td>@Html.Raw(item.MoTa)</td>
             <td>@item.XuatXu</td>
             <td>@item.Gia</td>
             <td>@item.SoLuongTon</td>
             <td>@item.NgayNhap</td>
-            <td>@item.HinhAnh</td>
+            <td>
+                <img src="@item.HinhAnh"/>
+            </td>
             <td>@item.ManHinh</td>
             <td>@item.Ram</td>
             <td>@item.CaMeRa</td>
             <td>@item.MaLoaiSanPham</td>
-            <td>@item.HinhAnh1</td>
-            <td>@item.HinhAnh2</td>
-            <td>@item.HinhAnh3</td>
-            <td>@item.HinhAnh4</td>
+            <td>
+                <img src="@item.HinhAnh1" />
+            </td>
+            <td>
+                <img src="@item.HinhAnh2" />
+            </td>
+            <td>
+                <img src="@item.HinhAnh3" />
+            </td>
+            <td>
+                <img src="@item.HinhAnh4" />
+            </td>
             <td colspan="2"><img src="~/Assets/img/editlsp.png" /></td>
             <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
         </tr>

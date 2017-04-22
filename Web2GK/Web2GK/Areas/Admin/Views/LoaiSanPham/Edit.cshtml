@@ -1,0 +1,31 @@
+﻿@model WebGiuaKiConnection.LoaiSanPham
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h2>San Pham</h2>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <input type="hidden" />
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenLoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" required value="@Model.TenLoaiSP" readonly>
+                @Html.EditorFor(model => model.TenLoaiSP, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenLoaiSP, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

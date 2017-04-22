@@ -40,8 +40,10 @@
         <tr>
             <td>@item.MaLoaiSanPham </td>
             <td>@item.TenLoaiSP </td>
-            <td colspan="2"><img src="~/Assets/img/editlsp.png" /></td>
-            <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
+            <td colspan="2">
+                <a href="@Url.Action("Edit","LoaiSanPham",new { id= @item.MaLoaiSanPham})"><img src="~/Assets/img/editlsp.png" /></a></td>
+            <td colspan="2">
+                <a href="@Url.Action("XoaTamThoi","LoaiSanPham",new { id= @item.MaLoaiSanPham})"><img src="~/Assets/img/deletelsp.png" /></a></td>
         </tr>
     }
 </table>
