@@ -55,3 +55,4 @@ C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.xml
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.Mvc.xml
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.dll
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.pdb
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.csprojResolveAssemblyReference.cache

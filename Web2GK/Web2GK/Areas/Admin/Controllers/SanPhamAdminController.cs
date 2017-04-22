@@ -34,17 +34,33 @@ namespace Web2GK.Areas.Admin.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult Create(SanPham  sp)
         {
-            try
+            //try
             {
                 // TODO: Add insert logic here
                 //Hàm thêm
+                if (HttpContext.Request.Files.Count > 0) { }
+                
+                var hpf = HttpContext.Request.Files[0];
+                if (hpf.ContentLength > 0)
+                {
+                    string fileName = Guid.NewGuid().ToString();
+                    
+                    string fullPathWithFileName = "/Assets/img/products/" + fileName+".jpg";
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    sp.HinhAnh = fullPathWithFileName;
+                    sp.HinhAnh1 = fullPathWithFileName;
+                    sp.HinhAnh2 = fullPathWithFileName;
+                    sp.HinhAnh3 = fullPathWithFileName;
+                    sp.HinhAnh4 = fullPathWithFileName;
+                }
+            }
                 SanPhamBus.ThemSP(sp);
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
         }
 
         // GET: Admin/SanPhamAdmin/Edit/5
