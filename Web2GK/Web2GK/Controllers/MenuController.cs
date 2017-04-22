@@ -3,30 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web2GK.Models.Bus;
 
-namespace Web2GK.Areas.Admin.Controllers
+namespace Web2GK.Controllers
 {
-    public class NhaSanXuatController : Controller
+    public class MenuController : Controller
     {
-        // GET: Admin/NhaSanXuat
-        public ActionResult Index()
+        // GET: Menu
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            return View(MenuBus.DanhSach(page, 4));
         }
 
-        // GET: Admin/NhaSanXuat/Details/5
+        // GET: Producer/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(MenuBus.ChiTiet(id));
         }
+        public ActionResult AllProducts(int id)
+        {
 
-        // GET: Admin/NhaSanXuat/Create
+            return View(MenuBus.TatCaSanPham(id));
+        }
+        // GET: Menu/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Create
+        // POST: Menu/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +47,13 @@ namespace Web2GK.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/NhaSanXuat/Edit/5
+        // GET: Menu/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Edit/5
+        // POST: Menu/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +69,13 @@ namespace Web2GK.Areas.Admin.Controllers
             }
         }
 
-        // GET: Admin/NhaSanXuat/Delete/5
+        // GET: Menu/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Admin/NhaSanXuat/Delete/5
+        // POST: Menu/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

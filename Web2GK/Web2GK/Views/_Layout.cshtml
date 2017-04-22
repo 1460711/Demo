@@ -1,4 +1,4 @@
-﻿
+﻿@using Web2GK.Models.Bus;
 @{
     ViewBag.Title = "_Layout";
 }
@@ -108,13 +108,21 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="@Url.Action("Index","SanPham")">Home</a></li>
-                        <li><a href="@Url.Action("Shop","Home")">Shop page</a></li>
+                        @foreach (var i in MenuBus.DanhSach())
+                        {
+                            <li>
+                                @*<a href="category.html">@i.TenLoaiSP</a>*@
+                                @*@Html.ActionLink(i.TenLoaiSP, "AllProducts", "Producer", new { @id = i.MaLoaiSanPham })*@
+                                <a href="@Url.Action("AllProducts","Menu",new { @id = i.MaLoaiSanPham })">@i.TenLoaiSP</a>
+                            </li>
+                        }
+                        @*<li><a href="@Url.Action("Shop","Home")">Shop page</a></li>
                         <li><a href="@Url.Action("SingleProduct","Home")">Single product</a></li>
                         <li><a href="@Url.Action("Cart","Home")">Cart</a></li>
                         <li><a href="@Url.Action("Checkout","Home")">Checkout</a></li>
                         <li><a href="#">Category</a></li>
                         <li><a href="#">Others</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Contact</a></li>*@
                     </ul>
                 </div>
             </div>

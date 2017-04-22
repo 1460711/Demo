@@ -24,5 +24,18 @@ namespace Web2GK.Models.Bus
             var db = new WebGiuaKiConnectionDB();
             return db.SingleOrDefault<SanPham>("select *from sanpham where MaSP=@0",id);
         }
+        public static void ThemSP(SanPham sp)
+        {
+            var db = new WebGiuaKiConnectionDB();
+            db.Insert(sp);
+        }
+        public static IEnumerable<LoaiSanPham> LDanhSach()
+        {
+            using (var db = new WebGiuaKiConnectionDB())
+            {
+                return db.Query<WebGiuaKiConnection.LoaiSanPham>("select * from LoaiSanPham");
+            }
+                
+        }
     }
 }

@@ -33,3 +33,25 @@ C:\Users\HOME\documents\visual studio 2015\Projects\Web2GK\Web2GK\bin\PagedList.
 C:\Users\HOME\documents\visual studio 2015\Projects\Web2GK\Web2GK\bin\PagedList.Mvc.dll
 C:\Users\HOME\documents\visual studio 2015\Projects\Web2GK\Web2GK\bin\PagedList.xml
 C:\Users\HOME\documents\visual studio 2015\Projects\Web2GK\Web2GK\bin\PagedList.Mvc.xml
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\ApplicationInsights.config
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\csc.exe
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\vbc.exe
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\VBCSCompiler.exe
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\Web2GK.dll.config
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\Web2GK.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\Web2GK.pdb
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.Mvc.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.xml
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.Mvc.xml
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.dll
+C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.pdb

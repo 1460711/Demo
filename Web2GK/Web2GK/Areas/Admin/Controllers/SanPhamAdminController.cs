@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web2GK.Models.Bus;
+using WebGiuaKiConnection;
 
 namespace Web2GK.Areas.Admin.Controllers
 {
@@ -11,7 +13,8 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin
         public ActionResult Index()
         {
-            return View();
+            var ds = SanPhamBus.DanhSach();
+            return View(ds);
         }
 
         // GET: Admin/SanPhamAdmin/Details/5
@@ -23,17 +26,19 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin/Create
         public ActionResult Create()
         {
+            ViewBag.MaLoaiSanPham = new SelectList(SanPhamBus.LDanhSach(), "MaLoaiSanPham", "TenLoaiSP");
             return View();
         }
 
         // POST: Admin/SanPhamAdmin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(SanPham  sp)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                //Hàm thêm
+                SanPhamBus.ThemSP(sp);
                 return RedirectToAction("Index");
             }
             catch

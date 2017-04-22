@@ -1,8 +1,75 @@
-﻿
+﻿@model IEnumerable<WebGiuaKiConnection.SanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: auto;
+    }
 
-<h2>Đây là controlller của Sản Phẩm</h2>
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #5d5e63;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+<h2>Quản lí sản phẩm</h2>
+
+<table>
+    <tr>
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+        <th>Mô tả</th>
+        <th>Xuất xứ</th>
+        <th>Giá</th>
+        <th>SL Tồn</th>
+        <th>Ngày Nhập</th>
+        <th>Hình Ảnh</th>
+        <th>Màn hình</th>
+        <th>Ram</th>
+        <th>Camera</th>
+        <th>Mã loại SP</th>
+        <th>Hình 1</th>
+        <th>Hình 2</th>
+        <th>Hình 3</th>
+        <th>Hình 4</th>
+        <th colspan="2">
+            <a href="#"><img src="~/Assets/img/addlsp.png"  /></a>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaSP</td>
+            <td>@item.TenSP</td>
+            <td>@item.MoTa</td>
+            <td>@item.XuatXu</td>
+            <td>@item.Gia</td>
+            <td>@item.SoLuongTon</td>
+            <td>@item.NgayNhap</td>
+            <td>@item.HinhAnh</td>
+            <td>@item.ManHinh</td>
+            <td>@item.Ram</td>
+            <td>@item.CaMeRa</td>
+            <td>@item.MaLoaiSanPham</td>
+            <td>@item.HinhAnh1</td>
+            <td>@item.HinhAnh2</td>
+            <td>@item.HinhAnh3</td>
+            <td>@item.HinhAnh4</td>
+            <td colspan="2"><img src="~/Assets/img/editlsp.png" /></td>
+            <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
+        </tr>
+    }
+</table>
 
