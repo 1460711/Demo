@@ -314,6 +314,9 @@
     <Content Include="Areas\Admin\Views\SanPhamAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SanPhamAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\SanPhamAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPham\Create.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -330,6 +333,7 @@
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
+    <Compile Include="Areas\Admin\Models\BUS\NhaSanXuat.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
@@ -380,7 +384,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>

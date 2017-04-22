@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web2GK.Areas.Admin.Models.BUS;
+using WebGiuaKiConnection;
 
 namespace Web2GK.Areas.Admin.Controllers
 {
@@ -11,7 +13,7 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPham
         public ActionResult Index()
         {
-            return View();
+            return View(NhaSanXuat.DanhSach());
         }
 
         // GET: Admin/LoaiSanPham/Details/5
@@ -23,17 +25,18 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/LoaiSanPham/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
         // POST: Admin/LoaiSanPham/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(LoaiSanPham p)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                NhaSanXuat.Them(p);
                 return RedirectToAction("Index");
             }
             catch

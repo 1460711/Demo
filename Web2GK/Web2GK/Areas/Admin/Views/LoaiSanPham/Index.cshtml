@@ -1,14 +1,14 @@
 ﻿
+@model IEnumerable<WebGiuaKiConnection.LoaiSanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
-
 <style>
     table {
         border-collapse: collapse;
-        width: 50%;
-        margin:auto;
+        width: 100%;
+        margin: auto;
     }
 
     th, td {
@@ -25,26 +25,24 @@
         color: white;
     }
 </style>
-    <h2>Quản lí loại sản phẩm</h2>
-
-    <table>
+<h2>Quản lí nhà sản xuất</h2>
+<table>
+    <tr>
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+       
+        <th colspan="2">
+            <a href="@Url.Action("Create","LoaiSanPham")"><img src="~/Assets/img/addlsp.png" /></a>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>Mã SP</th>
-            <th>Tên SP</th>
-            <th>Mô tả</th>
-           <a href="#"><img src="~/Assets/img/addlsp.png" style="margin-left:50%;"/></a>
+            <td>@item.MaLoaiSanPham </td>
+            <td>@item.TenLoaiSP </td>
+            <td colspan="2"><img src="~/Assets/img/editlsp.png" /></td>
+            <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
         </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.MaSP</td>
-                <td>@item.TenSP</td>
-                <td>@item.MoTa</td>
-                <td colspan="2"><img src="~/Assets/img/editlsp.png" /></td>
-                <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
-            </tr>
-        }
-        
-    </table>
-
+    }
+</table>
 
