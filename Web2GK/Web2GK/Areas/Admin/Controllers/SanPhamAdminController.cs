@@ -13,7 +13,7 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin
         public ActionResult Index()
         {
-            var ds = SanPhamBus.DanhSach();
+            var ds = SanPhamBus.DanhSachAdmin();
             return View(ds);
         }
 
@@ -34,18 +34,17 @@ namespace Web2GK.Areas.Admin.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult Create(SanPham  sp)
         {
-            //try
             {
                 // TODO: Add insert logic here
                 //Hàm thêm
                 if (HttpContext.Request.Files.Count > 0) { }
-                
+
                 var hpf = HttpContext.Request.Files[0];
                 if (hpf.ContentLength > 0)
                 {
                     string fileName = Guid.NewGuid().ToString();
-                    
-                    string fullPathWithFileName = "/Assets/img/products/" + fileName+".jpg";
+
+                    string fullPathWithFileName = "/Assets/img/products/" + fileName + ".jpg";
                     hpf.SaveAs(Server.MapPath(fullPathWithFileName));
                     sp.HinhAnh = fullPathWithFileName;
                     sp.HinhAnh1 = fullPathWithFileName;
@@ -54,19 +53,15 @@ namespace Web2GK.Areas.Admin.Controllers
                     sp.HinhAnh4 = fullPathWithFileName;
                 }
             }
-                SanPhamBus.ThemSP(sp);
-                return RedirectToAction("Index");
-            //}
-            //catch
-            //{
-            //    return View();
-            //}
+            sp.TinhTrang = 0;
+            SanPhamBus.ThemSP(sp);
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/SanPhamAdmin/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(SanPhamBus.ChiTietAdmin(id));
         }
 
         // POST: Admin/SanPhamAdmin/Edit/5

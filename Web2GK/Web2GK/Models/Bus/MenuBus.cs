@@ -12,7 +12,7 @@ namespace Web2GK.Models.Bus
         public static IEnumerable<LoaiSanPham> DanhSach()
         {
             var sql = new WebGiuaKiConnectionDB();
-            return sql.Query<LoaiSanPham>("select * from LoaiSanPham ");
+            return sql.Query<LoaiSanPham>("select * from LoaiSanPham where TinhTrang = 0");
         }
 
         public static Page<SanPham> DanhSach(int page, int itempage)
@@ -24,7 +24,7 @@ namespace Web2GK.Models.Bus
         public static SanPham ChiTiet(int id)
         {
             var sql = new WebGiuaKiConnectionDB();
-            return sql.SingleOrDefault<SanPham>("select * from SanPham ", id);
+            return sql.SingleOrDefault<SanPham>("select * from SanPham where MaSP =@0 ", id);
         }
 
         public static IEnumerable<SanPham> TatCaSanPham(int id)

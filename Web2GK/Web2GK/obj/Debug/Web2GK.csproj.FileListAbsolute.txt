@@ -55,4 +55,27 @@ C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.xml
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\bin\PagedList.Mvc.xml
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.dll
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.pdb
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\ApplicationInsights.config
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\csc.exe
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\System.Collections.Immutable.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\System.Reflection.Metadata.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\vbc.exe
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\VBCSCompiler.exe
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\roslyn\VBCSCompiler.exe.config
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\Web2GK.dll.config
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\Web2GK.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\Web2GK.pdb
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\PagedList.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\PagedList.Mvc.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\PagedList.xml
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\bin\PagedList.Mvc.xml
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\obj\Debug\Web2GK.dll
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\obj\Debug\Web2GK.pdb
+D:\Học Tập\Web 2\LT\Web2GK\Web2GK\obj\Debug\Web2GK.csprojResolveAssemblyReference.cache
 C:\Users\HOME\Desktop\Git\Demo\Web2GK\Web2GK\obj\Debug\Web2GK.csprojResolveAssemblyReference.cache

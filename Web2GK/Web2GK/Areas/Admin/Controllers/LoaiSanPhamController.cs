@@ -36,6 +36,7 @@ namespace Web2GK.Areas.Admin.Controllers
             try
             {
                 // TODO: Add insert logic here
+                p.TinhTrang = 0;
                 NhaSanXuat.Them(p);
                 return RedirectToAction("Index");
             }
@@ -58,6 +59,7 @@ namespace Web2GK.Areas.Admin.Controllers
             try
             {
                 // TODO: Add update logic here
+                lsp.TinhTrang = 0;
                 NhaSanXuat.Updatensx(id, lsp);
                 return RedirectToAction("Index");
             }
@@ -103,6 +105,22 @@ namespace Web2GK.Areas.Admin.Controllers
             {
                 return View();
             }
+        }
+        [HttpPost]
+        public ActionResult DeleteNSX(int id)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                NhaSanXuat.DeleteDS(id);
+                TempData["Success"] = "Xoa thanh cong !";
+            }
+            catch
+            {
+                TempData["Error"] = "Xoa khong thanh cong !";
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -40,10 +40,15 @@
         <tr>
             <td>@item.MaLoaiSanPham </td>
             <td>@item.TenLoaiSP </td>
+            <td>@item.TinhTrang </td>
             <td colspan="2">
                 <a href="@Url.Action("Edit","LoaiSanPham",new { id= @item.MaLoaiSanPham})"><img src="~/Assets/img/editlsp.png" /></a></td>
-            <td colspan="2">
-                <a href="@Url.Action("XoaTamThoi","LoaiSanPham",new { id= @item.MaLoaiSanPham})"><img src="~/Assets/img/deletelsp.png" /></a></td>
+            <td>
+                <form method="post" action="@Url.Action("DeleteNSX","LoaiSanPham")">
+                    <input type="hidden" name="id" value="@item.MaLoaiSanPham" />
+                    <button type="submit"><img src="~/Assets/img/deletelsp.png" /></button>
+                </form>
+            </td>
         </tr>
     }
 </table>

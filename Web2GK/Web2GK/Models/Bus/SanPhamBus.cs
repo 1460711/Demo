@@ -12,17 +12,17 @@ namespace Web2GK.Models.Bus
         public static IEnumerable<SanPham> DanhSach()
         {
             var db = new WebGiuaKiConnectionDB();
-            return db.Query<SanPham>("select * from sanpham");
+            return db.Query<SanPham>("select * from SanPham where TinhTrang =0");
         }
         public static Page<SanPham> DanhSach(int page,int itempage)
         {
             var db = new WebGiuaKiConnectionDB();
-            return db.Page<SanPham>(page, itempage,"select * from sanpham");
+            return db.Page<SanPham>(page, itempage,"select * from SanPham");
         }
         public static SanPham ChiTiet(int id)
         {
             var db = new WebGiuaKiConnectionDB();
-            return db.SingleOrDefault<SanPham>("select *from sanpham where MaSP=@0",id);
+            return db.SingleOrDefault<SanPham>("select *from SanPham where MaSP=@0",id);
         }
         public static void ThemSP(SanPham sp)
         {
@@ -36,6 +36,16 @@ namespace Web2GK.Models.Bus
                 return db.Query<WebGiuaKiConnection.LoaiSanPham>("select * from LoaiSanPham");
             }
                 
+        }
+        public static IEnumerable<SanPham> DanhSachAdmin()
+        {
+            var db = new WebGiuaKiConnectionDB();
+            return db.Query<SanPham>("select * from SanPham");
+        }
+        public static SanPham ChiTietAdmin(int id)
+        {
+            var db = new WebGiuaKiConnectionDB();
+            return db.SingleOrDefault<SanPham>("select *from SanPham where MaSP=@0", id);
         }
     }
 }

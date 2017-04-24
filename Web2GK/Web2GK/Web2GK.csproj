@@ -318,7 +318,6 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Create.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiSanPham\XoaTamThoi.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

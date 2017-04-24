@@ -22,7 +22,7 @@
                 <div class="single-product-widget">
                     <div class="single-wid-product">
                         <a href="@Url.Action("Details", new { id = @item.MaSP })"><img src=@item.HinhAnh alt="" class="product-thumb"></a>
-                        <h2>@Html.ActionLink(item.TenSP, "Details", new { id = item.MaSP })</h2>
+                        <h2>@Html.ActionLink(item.TenSP, "Details",  new { id = item.MaSP })</h2>
 
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>

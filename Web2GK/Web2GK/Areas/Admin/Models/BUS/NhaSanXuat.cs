@@ -37,5 +37,16 @@ namespace Web2GK.Areas.Admin.Models.BUS
                 sql.Update(lsp, id);
             }
         }
+        public static void DeleteDS(int id)
+        {
+            using (var db = new WebGiuaKiConnectionDB())
+            {
+                var lsp = db.Single<LoaiSanPham>("select * from LoaiSanPham where MaLoaiSanPham = @0", id);
+
+                lsp.TinhTrang = 1;
+                db.Update("LoaiSanPham", "MaLoaiSanPham", lsp);
+            }
+        }
+
     }
 }

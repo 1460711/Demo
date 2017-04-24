@@ -54,13 +54,8 @@ namespace WebGiuaKiConnection
 		{
 			CommonConstruct();
 		}
-
-        internal T SingleOrDefaulty<T>(string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        partial void CommonConstruct();
+		
+		partial void CommonConstruct();
 		
 		public interface IFactory
 		{
@@ -166,11 +161,15 @@ namespace WebGiuaKiConnection
 
 		[Column] public string TenLoaiSP { get; set; }
 
-        internal static object ChitietAdmin(int id)
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+
+
+
+		[Column] public int? TinhTrang { get; set; }
+
+
+
+	}
 
     
 
@@ -281,6 +280,12 @@ namespace WebGiuaKiConnection
 
 
 		[Column] public string HinhAnh4 { get; set; }
+
+
+
+
+
+		[Column] public int? TinhTrang { get; set; }
 
 
 
