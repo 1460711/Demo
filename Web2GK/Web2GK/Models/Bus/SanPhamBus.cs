@@ -47,5 +47,19 @@ namespace Web2GK.Models.Bus
             var db = new WebGiuaKiConnectionDB();
             return db.SingleOrDefault<SanPham>("select *from SanPham where MaSP=@0", id);
         }
+
+
+        //--------xoa tam thoi san pham--------------------//
+        public static void xoatamDS(int id)
+        {
+            using (var db = new WebGiuaKiConnectionDB())
+            {
+                var lsp = db.Single<SanPham>("select * from SanPham where MaSP = @0", id);
+
+                lsp.TinhTrang = 1;
+                db.Update("SanPham", "MaSP", lsp);
+            }
+        }
+
     }
 }

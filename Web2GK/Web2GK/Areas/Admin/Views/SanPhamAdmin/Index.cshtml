@@ -34,7 +34,6 @@
         <th>Xuất xứ</th>
         <th>Giá</th>
         <th>SL Tồn</th>
-        <th>Ngày Nhập</th>
         <th>Hình Ảnh</th>
         <th>Màn hình</th>
         <th>Ram</th>
@@ -44,6 +43,7 @@
         <th>Hình 2</th>
         <th>Hình 3</th>
         <th>Hình 4</th>
+        <th>Tình Trạng</th>
         <th colspan="2">
             <a href="@Url.Action("Create","SanPhamAdmin")"><img src="~/Assets/img/addlsp.png"  /></a>
         </th>
@@ -57,7 +57,6 @@
             <td>@item.XuatXu</td>
             <td>@item.Gia</td>
             <td>@item.SoLuongTon</td>
-            <td>@item.NgayNhap</td>
             <td>
                 <img src="@item.HinhAnh"/>
             </td>
@@ -77,10 +76,16 @@
             <td>
                 <img src="@item.HinhAnh4" />
             </td>
+            <td>@item.TinhTrang</td>
             <td colspan="2">
                 <a href="@Url.Action("Edit","SanPhamAdmin",new { id= @item.MaSP})"><img src="~/Assets/img/editlsp.png" /></a>
             </td>
-            <td colspan="2"><img src="~/Assets/img/deletelsp.png" /></td>
+            <td>
+                <form method="post" action="@Url.Action("DeleteSP","SanPhamAdmin")">
+                    <input type="hidden" name="id" value="@item.MaSP" />
+                    <button type="submit"><img src="~/Assets/img/deletelsp.png" /></button>
+                </form>
+            </td>
         </tr>
     }
 </table>

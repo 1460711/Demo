@@ -43,14 +43,25 @@ namespace Web2GK.Areas.Admin.Controllers
                 if (hpf.ContentLength > 0)
                 {
                     string fileName = Guid.NewGuid().ToString();
-
+                    string fileName1 = Guid.NewGuid().ToString();
+                    string fileName2 = Guid.NewGuid().ToString();
+                    string fileName3 = Guid.NewGuid().ToString();
+                    string fileName4 = Guid.NewGuid().ToString();
                     string fullPathWithFileName = "/Assets/img/products/" + fileName + ".jpg";
+                    string fullPathWithFileName1 = "/Assets/img/products/" + fileName + ".jpg";
+                    string fullPathWithFileName2 = "/Assets/img/products/" + fileName + ".jpg";
+                    string fullPathWithFileName3 = "/Assets/img/products/" + fileName + ".jpg";
+                    string fullPathWithFileName4 = "/Assets/img/products/" + fileName + ".jpg";
                     hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName1));
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName2));
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName3));
+                    hpf.SaveAs(Server.MapPath(fullPathWithFileName4));
                     sp.HinhAnh = fullPathWithFileName;
-                    sp.HinhAnh1 = fullPathWithFileName;
-                    sp.HinhAnh2 = fullPathWithFileName;
-                    sp.HinhAnh3 = fullPathWithFileName;
-                    sp.HinhAnh4 = fullPathWithFileName;
+                    sp.HinhAnh1 = fullPathWithFileName1;
+                    sp.HinhAnh2 = fullPathWithFileName2;
+                    sp.HinhAnh3 = fullPathWithFileName3;
+                    sp.HinhAnh4 = fullPathWithFileName4;
                 }
             }
             sp.TinhTrang = 0;
@@ -61,11 +72,12 @@ namespace Web2GK.Areas.Admin.Controllers
         // GET: Admin/SanPhamAdmin/Edit/5
         public ActionResult Edit(int id)
         {
+            ViewBag.MaLoaiSanPham = new SelectList(SanPhamBus.LDanhSach(), "MaLoaiSanPham", "TenLoaiSP");
             return View(SanPhamBus.ChiTietAdmin(id));
         }
 
         // POST: Admin/SanPhamAdmin/Edit/5
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]    
         public ActionResult Edit(int id, FormCollection collection)
         {
             try
@@ -100,6 +112,15 @@ namespace Web2GK.Areas.Admin.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public ActionResult DeleteSP(int id)
+        {
+            
+                // TODO: Add delete logic here
+                SanPhamBus.xoatamDS(id);
+                return RedirectToAction("Index");
         }
     }
 }

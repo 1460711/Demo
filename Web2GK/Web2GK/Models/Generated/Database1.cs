@@ -225,12 +225,6 @@ namespace WebGiuaKiConnection
 
 
 
-		[Column] public DateTime? NgayNhap { get; set; }
-
-
-
-
-
 		[Column] public string HinhAnh { get; set; }
 
 
